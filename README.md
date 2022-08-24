@@ -5,15 +5,14 @@ Scheduled: [![Test](https://github.com/jonathanong/heroku-buildpack-ffmpeg-lates
 
 > If you'd like to maintain this repository, let me know!
 
-A Heroku buildpack for ffmpeg that always downloads the latest [static build](http://johnvansickle.com/ffmpeg/).
-Unlike other build packs, I never compile anything.
+A Heroku buildpack for ffmpeg that always downloads the 20220722 5.0.1 originally from [static build](http://johnvansickle.com/ffmpeg/) but [cached on s3](https://ccc-builds.s3.amazonaws.com/ffmpeg-git-amd64-static.tar.xz)
 
 ## Usage
 
 Run the following from the heroku command line:
 
 ```
-heroku buildpacks:add --index 1 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+heroku buildpacks:add --index 1 https://github.com/bufordtaylor/heroku-buildpack-ffmpeg-latest.git
 ```
 
 You can set a custom download URL by setting the variable `FFMPEG_DOWNLOAD_URL`.
